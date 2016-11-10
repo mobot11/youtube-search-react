@@ -1,13 +1,4 @@
-import React, { Component } from 'react';
-
-//state is a plain javascript object that is used to record and react to events
-//when state changes, a componnent immedietly rerenenders
-//need to initialize state
-//Always manipulate state with this.setState()s
-
-//controlled field is an element whose value is set by the state
-//controlled component has value set by state, not hte other way around
-//value only changes when the state changes
+import React, { Component } from 'react'
 
 export default class SearchBar extends Component {
 	constructor(props) {

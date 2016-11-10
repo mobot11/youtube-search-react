@@ -10,10 +10,7 @@ import VideoList from './components/video_list'
 
 const API_KEY = 'AIzaSyAYshyiQ74RA4vzKm4XGwGUhuHaWVqxhoA'
 
-
-
 //create a component
-
 class App extends Component {
 	constructor(props) {
 		super(props)
@@ -25,6 +22,7 @@ class App extends Component {
 
 	  this.videoSearch('surfboards')
 	}
+
 	videoSearch(term) {
 		YTSearch({ key: API_KEY, term: term }, (videos) => {
 			this.setState({
@@ -38,18 +36,17 @@ class App extends Component {
 		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
 
 		return (
-		<div>
-				<SearchBar onSearchTermChange={videoSearch}/>
+			<div>
+				<SearchBar onSearchTermChange={videoSearch} />
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList
 					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
 				 videos={this.state.videos} />
 			</div>
-			)
+		)
 	}
 }
 
 //render that shit
-
 
 ReactDOM.render(<App />, document.querySelector('.container'))

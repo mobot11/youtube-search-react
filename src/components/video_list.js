@@ -3,7 +3,6 @@ import VideoListItem from './video_list_item'
 
 //rendering an array assumes its a list, adds an automatic key prop to keep track of
 //a number in the list
-
 const VideoList = (props) => {
 	const videoItems = props.videos.map((video) => {
 		return (
