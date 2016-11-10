@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import YTSearch from 'youtube-api-search'
 import VideoDetail from './components/video_detail'
